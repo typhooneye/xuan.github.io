@@ -102,7 +102,7 @@
                      sizes="(max-width: 2000px) 100vw, 2000px" alt="">
                 </p> -->
 
-                <h2>引入与背景</h2>
+                <h2>1. 引入与背景</h2>
 
                 <p>在宇宙深处寻找第二地球一直是天文学领域的重大挑战之一。然而囿于行星的暗弱，探测太阳系以外的行星推进缓慢，直到1995年人类才发现第一颗绕类太阳恒星公转的系外行星。这之后，系外行星探测迎来春天，随着新的探测方法的提出、望远镜精度的提高——特别是开普勒太空望远镜的升空，已确认系外行星的数量得到井喷式增长，多种多样的行星和行星系统不断刷新着我们的认知。处于宜居带内的类地行星的发现提醒着我们，人类或许并不孤独，宇宙深处的行星上或许有着与我们类似的生命。</p>
                 <p>我们如何能获得关于这些行星的更多信息？可以结合现有的各种探测方法对行星的各项参数加以确认。现有的技术已经可以做到对行星进行直接成像，甚至对穿过行星大气层的光进行分光，以此探测行星大气的化学组分。只不过囿于望远镜分辨率的限制（1.44λ/D），所有的行星都只能被视为一个点源，没有表面细节——我们对行星的表面一无所知。有没有可能探测到这些行星的表面细节呢？美国航天局喷气动力实验室的科学家Leon Alkalai和他的合作者提出了一个大胆的设想：利用太阳的引力透镜效应“制作”超大口径望远镜。遥远天体发出的光束经过太阳时，由于太阳周围引力场的弯曲，光线会发生偏折，聚焦于550AU以外的一点。如果我们将探测器安置在焦点位置上，便可以实现成像。只不过，汇聚光线的不再是透镜，而是太阳的引力场。</p>
@@ -110,75 +110,129 @@
                 <p>直到2016年，系外行星探索的热潮——特别是对宜居带内类地行星的搜寻，以及旅行者一号远距离航行的成功，让美国航天局（NASA）把目光重新投向这个“科幻”的设想上。喷气动力实验室的Leon Alkalai的团队详细研究了这种方法的可行性。他们还将研究成果发表在了美国宇航局2017年在华盛顿举办的行星科学2050年展望研讨会上[4]。目前已被NASA 创新先进概念项目（NASA Innovative Advanced Concepts）资助，后续的研究及可行性讨论一直在继续，但仍然只停留在技术分析层面。本文将针对NASA接受的最新提案进行介绍：在第二部分中对任务原理做出简单介绍，在第三部分给出争议中的技术难题以及解决方案，并在第四部分介绍任务的应用前景与展望。
                 </p>
 
-                <h2>任务原理</h2>
+                <h2>2. 任务原理</h2>
 
                 <p>根据广义相对论，光沿测地线传播，因此当光绕过一个大质量物体时，由于周围的时空被大质量物体弯曲，光线会发生偏折。这意味着遥远天体发出的平行光将像通过普通的透镜一样发生弯曲，最终汇聚一点（Figure 1）。太阳引力透镜望远镜项目便是利用这一类似于透镜成像的现象，计划在焦点处放置探测器，实现对遥远天体（系外行星）的成像。这一项目在光强放大率、分辨率等方面都有不可比拟的优势，下面将基于行星、日心、探测器在一条直线上的假设，就各光学系统参数做简单介绍：
 
-                <ul>
-                    <li>焦距：</li>
-                </ul>
+                <h3>2.1焦距：</h3>
 
                 <p>在广义相对论中，光速取决于引力势，应用于太阳上，偏转角度为：</p>
-                <div class="col-full text-center">
+                <p><div class="col-full text-center">
                 <img src="images/article1/equation1.png" alt="">
-                </div>
+                </div></p>
                 <p>其中M是透镜体（太阳）质量，c是光速，r是光线距日心的距离。则焦距(F)为：</p>
-                <div class="col-full text-center">
+                <p><div class="col-full text-center">
                 <img src="images/article1/equation2.png" alt="">
-                </div>
+                </div></p>
                 <p>透镜体不能遮挡入射光线，所以r的最小值是太阳半径（R_sun），代入得到最短焦距，大约是550AU。需要注意的是，与透镜不同，引力透镜有球差，光线可以汇聚的焦点有多个（Figure1）,焦距与r有关，超过547.8AU的任意一点都可以看作焦点，这一条射线被称为焦线。</p>
-                
-                <div class="col-full text-center">
+                <p>
+                <p><div class="col-full text-center">
                 <img src="images/article1/figure1.png" alt=""><br>
                 Figure 1 Geoffrey A. Landis https://ntrs.nasa.gov/search.jsp?R=20180003479 2019-05-18T12:35:42+00:00Z
-                </div>
-                <ul>
-                    <li>光强放大率：</li>
-                </ul>
+                </div></p>
+
+                <h3>2.2光强放大率：</h3>
                 <p>有别于简单的几何光学分析，Turyshev & Toth（2017）[8]考虑了电磁波在太阳引力场中的传播，用广义相对论的第一个后牛顿近似中的Schwarzschild单极子来表示。他们考虑从很远的点源发出的单色电磁波的情况，用波理论的视角采用一种在静态质量单极子场中光的衍射的处理方法，从而得到重力场中各处电磁波的解。这种理论得到的放大率为$2GM\frac(c^2 λ)~〖10〗^11 (λ=1μm)$，角分辨率是$λ/D≤ 〖10〗^(-10) arcsecond$（D是太阳直径）。也就是说，放置在750AU处的1平方米的探测器的有效集光面积相当于一台口径80km的望远镜。</p>
-                <div class="col-full text-center">
+
+                <p><div class="col-full text-center">
                 <img src="images/article1/figure2.png" alt=""><br>
                 Figure 2 Turyshev & Toth（2017）[8]给出的太阳引力透镜望远镜距光轴不同距离处的放大率（左上）、PSF（右上）、增益（下）。
-                </div>
-                <ul>
-                    <li>多像素成像：</li>
-                </ul>
+                </div></p>
+
+                <h3>2.3多像素成像：</h3>
                 <p>探测器可以通过加装“日冕仪”遮挡住视场中心的光，从而消除掉太阳光的影响，对遥远行星发出的光进行成像。如图2所示，由于引力效应，探测器接收到行星发出的光会形成一个圆环，被称为爱因斯坦环。一个距离为z_ep、直径为D_ep的系外行星，它的光会汇聚在焦线两侧直径为~D_ep (z/z_ep)的圆柱体内，z是探测器距日心的距离。这也是爱因斯坦环的厚度（b^'-b）。爱因斯坦环的半径（b）~R_sun √(z/z_0 )。其中z_0=548.7AU，R_sun是太阳半径。</p>
-                <div class="col-full text-center">
+                <p><div class="col-full text-center">
                 <img src="images/article1/figure3.png" alt=""><br>
                 Figure 3 系外行星成像图示。(Slava G. Turyshev et al 2018)
-                </div>
+                </div></p>
 
                 <p>由于日冕的影响，b的最小值不能是太阳半径，因此探测器的位置要比550AU还要远。</p>
                 <p>来自100光年外的地球大小的行星的光会在650AU处汇聚在直径1.3km的圆柱内。然而建造1.3km半径的探测器是不可行的。我们只能用小探测器一次观测一小片区域，重复观测后将其拼成完整图像。假设小探测器直径为1m，我们要获得〖10〗^3×〖10〗^3像素的高分辨率图像，探测器一次只探测这1.3km×1.3km区域的一个像素点，对应于行星表面上10km^2的区域，成像效果如图3所示。</p>
                 <p>需要注意的是，虽然探测器每次只能探测一个像素点，但这并不意味着我们只需得到光强信息就能拼接出完整图像。每个像素点内都包含大量细节，需要通过复杂的反卷积算法从中提取出有效的信息、进行成像，这仍是待克服的技术难题。另外有许多新的巧妙的成像方式被提出，这会在第三部分予以介绍。</p>
 
-                <div class="col-full text-center">
+                <p><div class="col-full text-center">
                 <img src="images/article1/figure4.png" alt=""><br>
                 Figure 4多像素拼接图像(DeLuca 2017).
-                </div>
+                </div></p>
+                <h2>.</h2>
 
-                <h2>待克服技术难题</h2>
-                <ul>
-                    <li>探测器运送[8]：</li>
-                </ul>
+                <h2>3. 待克服技术难题</h2>
+
+                <h3>3.1探测器运送[8]：</h3>
+
                 <p>根据理论，探测器将被放置在距日心650AU左右处。然而目前运行最远的人造探测器“旅行者一号”才刚刚到达138AU处，它已经旅行42年了，并且我们无法对它下达任何指令，包括减速、停止。运送一个探测器在有限的时间内到达650AU处，并且及时减速、停止，调整姿态，与地球进行有效的信息传输，完成这一系列工作的难度可想而知。目前的计划是为探测器加装动力系统，花六个月的时间到达木星，利用木星的引力弹弓效应加速到达太阳，贴近太阳（5个太阳半径处）飞行，从而利用太阳的引力弹弓效应得到大幅加速，速度可达到15AU/year-20AU/year，这意味着只需要30-38年 ，探测器便可到达650AU的指定位置处。但是从未有探测器离太阳如此至今，就算是专门探测太阳的帕克卫星（2018）也只工作在8.5个太阳半径处。</p>
-                <div class="col-full text-center">
+                <p><div class="col-full text-center">
                 <img src="images/article1/figure5.png" alt=""><br>
                 Figure 5 探测器运送轨迹
-                </div>
-                <ul>
-                    <li>指向精度（[4]）</li>
-                </ul>
-
+                </div></p>
+                
+                <h3>3.2指向精度（[4]）</h3>
                 <p>在第二部分，我们的讨论都基于目标源和日心、探测器三点一线的假设。如果我们要换一个目标，为了重新达到三点一线的要求，我们需要移动探测器。新的目标源如果偏离原目标1°，探测器需要移动10AU, 大概是地球到土星的距离。所以，太阳引力透镜望远镜将是一个单目标望远镜，我们需要在发射之前就确定好目标。</p>
                 <p>确定目标行星后，行星的位置也不是静止不动的。假设一颗行星的公转速度与地球一样（30 km/s），行星上1km的区域将会在33ms内穿过1m的探测器视场。所以，行星并不能静止成像，会出现运动模糊（motion blurred）。整个行星会花42秒穿过整个视场。不过，利用这一特性也可以在不移动探测器的前提下实现整个行星的成像，这将会在4中提到。</p>
-                <ul>
-                    <li>探测器移动与控制（[8]）</li>
-                </ul>
+
+                <h3>3.3探测器移动与控制（[8]）</h3>
 
                 <p>假设行星与日心连线不变，为了实现探测器在焦线附近1.3km*1.3km的范围内扫描这一任务，地面需要对探测器的位置进行有效控制与调整。对于处在650AU处并且不可能携带过重燃料的探测器来说非常难实现。科学家提出一个巧妙的方案：将两个探测器用可以伸缩的钢绳连结，绕钢绳中心旋转，利用角动量守恒可以实现对整个区域的扫描。图6展示了仪器姿态的控制，以及在不同位置上的成像。使用这一方案，探测器可以在三个月的时间内完成对一颗行星的完整观测。</p>
                 
+                <p><div class="col-full text-center">
+                <img src="images/article1/figure6.png" alt=""><br>
+                Figure 6 探测器位置控制
+                </div></p>
+                <h2>.</h2>
+
+                <h3>3.4 备选成像方案</h3>
+                <h4>3.4.1 备选成像方案（一）——反卷积处理爱因斯坦环图像（[4]）</h4>
+                <p>探测器每一次探测得到的图像并不是Figure 4中的一个像素点，而是如Figure 6所示的不同的爱因斯坦环。探测器在不同位置看到的爱因斯坦环的会互相重叠，最终导致爱因斯坦环的不同部分代表着行星表面不同区域的细节（Figure 7）。既然我们可以从爱因斯坦环中得到行星表面细节的信息，那么直接对爱因斯坦环进行成像也可以实现对行星表面的成像。</p>
+                <p>行星在“新月相”（行星的大部分是暗的）时进行观测对图像处理最为有利。因为发光面积减少，焦点模糊（Focal blur（FWHM）是成像行星（发光区域）半径的一半）带来的不良影响就会减弱。</p>
+                <p>爱因斯坦环的半径为3.5 arc seconds，行星的分辨率将取决于焦面上的望远镜的分辨率。2.4m的哈勃望远镜的分辨率是0.1 arc seconds，极限可达0.05 arc seconds，如果把它放在焦点上，爱因斯坦环将被分割成110块。如果在“半月相”时对行星进行观测，再将对应于不同半球的半月相图像进行叠加，那么分辨率将翻倍，即量级为行星视面的1/220th 。理论上可以达到200km。</p>
+
+                <p><div class="col-full text-center">
+                <img src="images/article1/figure7.png" alt=""><br>
+                Figure 7 爱因斯坦环的不同部分对应于行星表面不同区域 (Landis, Geoffrey A. 2017)
+                </div></p>
+                <h2>.</h2>
+                <h4>3.4.2 备选成像方案（一）——自转反卷积“反照率”成像（[1]）</h4>
+                <p>这一方案的核心思想是，探测器在焦点处可以接受到整个行星的光，虽然成像是带有畸变的。如果我们遮挡住行星部分区域的光（例如一块50km*50km的区域），那么探测器接收到的光流量会有微弱的下降。下降的这一部分就是被遮挡住的区域所发出的光的流量。行星的自转会使得探测器能够在一个行星日内探测行星表面的不同部分。利用这一方法，我们可以通过一天的光变曲线来进行经度向的反卷积。Geoffrey 等人（2017）利用NASA Deep Space Climate天文台的EPIC照相机的成像数据生成一张反照率地图，模拟太阳引力透镜望远镜的探测过程，生成了一张模拟成像效果图（Figure 1）。</p>
+                <p>这一方法对信噪比的要求非常高，而且要求的信噪比与像素点个数成正比。一张100*300 pixel的图像便需要30000的信噪比，即使是口径为1km的望远镜也无法做到，但是这对于太阳引力透镜望远镜来说是比较容易实现的。</p>
+
+                <p><div class="col-full text-center">
+                <img src="images/article1/figure8.png" alt=""><br>
+                Figure 8 利用NASA Deep Space Climate天文台的EPIC照相机的成像数据（上图）进行自转反卷积算法模拟处理，得到处理后的图像（下图）。
+                </div></p>
+                <p>除此之外，该望远镜还面临着太阳引力场不均匀、日冕影响、电磁波散射等问题，这里不再作介绍，可参阅参考文献[2][3][5][9]。</p>
+                <h1>4. 应用展望</h1>
+                <p> 太阳引力透镜极高的分辨率让它具有无可比拟的优势。目前的行星成像只是一个像素点，且只能分辨出与主星相距超过0.1角秒的行星。口径为3m的望远镜只能探测到10pc以内的类地行星。即使是WFIRST也只能探测到10pc的类木星。至于表面细节，目前还无法做到对系外行星的多像素成像。30pc处的一颗类地行星的角直径只有1.4×〖10〗^(-11)  rad。即使是口径达80km的望远镜（第二部分计算得的等效集光面积），也不能分辨这颗行星。要想用几千个像素分辨这颗行星，口径需要102000 km，约为12个地球半径。建造基线如此之长的干涉仪基本是不可能的。因此，引力透镜望远镜具有不可替代性。</p>
+                <p>该项目目前已被NASA 创新先进概念项目（NASA Innovative Advanced Concepts）资助，课题第一期论文已经发表（[1]），后续的讨论还在进行当中，并且不局限于该课题组内。</p>
+                <p>Geoffrey Landis在NASA的一场报告中说道：太阳引力透镜望远镜所面临的技术难题都不会是致命缺陷，人们总是能想到机智的方法来克服或者规避这些问题，从而使这个大望远镜计划得以实施。然而，我们需要明确的是，这个项目远远比发射一个探测器到550AU处来得复杂。</p>
+                <h1>5. 后记</h1>
+                <p>我是在2018年夏天偶然听老师讲到这一计划，登时震惊与人类的想象力与执行力。“利用太阳引力透镜望远镜，我们能看到银河系内行星的表面！”在当时的我看来，这是科幻小说中才会出现的情节！为了完成本篇报告，我仔细阅读了相关论文，发现任务的复杂程度远超我的想象。如果说科幻的想法是起点，那科学的内容早已走得太远太远了，诸位科学家为解决技术难题而提出的巧妙方法甚至不逊色于“利用太阳的引力透镜效应做望远镜”这一想法本身。我被人类的想象与智慧所感动，希望有生之年能够见证这一伟大项目的实现。</p>
+                <p></p>
+                <h3>_________</h3>
+                <h3>参考文献</h3>
+                <p>[1] Turyshev S G , Shao M , Alkalai L , et al. Direct Multipixel Imaging and Spectroscopy of an Exoplanet with a Solar Gravity Lens Mission. Journal of the British Interplanetary Society, vol. 71, p. 361-368, 2018.<br>
+                [2] Landis, Geoffrey A, “Mission to the Gravitational Focus of the Sun: A Critical Analysis,” paper AIAA-2017-1679, AIAA Science and Technology Forum and Exposition 2017, Grapevine TX, Jan. 9-13, 2017.<br>
+                [3] Igor Loutsenko. On the Role of Caustic in Solar Gravitational Lens Imaging. Progress of Theoretical and Experimental Physics, Volume 2018, Issue 12, 1 December 2018, 123A02 <br>
+                [4] Landis, Geoffrey A. A Telescope at the Solar Gravitational Lens: Problems and Solutions. 5th Tennessee Valley Interstellar Workshop; 3-6 Oct. 2017; Huntsville, AL; United States<br>
+                [5] Slava G. Turyshev, B-G Andersson. The 550 AU Mission: A Critical Discussion. Mon.Not.Roy.Astron.Soc. 341 (2003) 577-582 <br>
+                [6] ESHLEMAN, V. R . Gravitational Lens of the Sun: Its Potential for Observations and Communications over Interstellar Distances. Science, 1979, 205(4411):1133-1135.<br>
+                [7] Claudio Maccone, Deep Space Flight and Communications: Exploiting the Sun as a Gravitational Lens, Springer Science & Business Media, 2009<br>
+                [8] DeLuca, J., “Exoplanet imaging with the solar gravitational lens,” 2017, animation, see at YouTube at: https://www.youtube.com/watch?v=Hjaj-Ig9jBs <br>
+                [9] Turyshev, S.G., and V.T. Toth, “Diffraction of light by the solar gravitational lens: a wave-theoretical treatment,”<br>
+                [10]    Phys. Rev. D 96, 024008 (2017), arXiv:1704.06824 [gr-qc]<br>
+                [11]    PAUL GILSTER. The FOCAL Mission: To the Sun’s Gravity Lens．https://www.centauri-dreams.org/2006/08/18/the-focal-mission-to-the-suns-gravity-lens/ (2006).<br>
+                [12]    Emerging Technology from the arXiv, T A Space Mission to the Gravitational Focus of the Sun Lens. https://www.technologyreview.com/s/601331/a-space-mission-to-the-gravitational-focus-of-the-sun/ (2016)<br>
+                [13]    Dirk Schulze-Makuch, The Ultimate Space Telescope Would Use the Sun as a Gravitational Lens. https://www.airspacemag.com/daily-planet/ultimate-space-telescope-would-use-sun-lens-180962499/ (2017) <br>
+                [14]    SOLAR GRAVITY LENS LOOKS AT EXOPLANETS, https://aerospace.org/article/solar-gravity-lens-looks-exoplanets# (2018)<br>
+                [15]    FOCAL (spacecraft), https://en.wikipedia.org/wiki/FOCAL_(spacecraft)
+                </p>
+
+
+
+
+
+
+
+
 
 
 
