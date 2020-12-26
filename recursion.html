@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <script src='js/ASCIIMathMLwFallback.js'></script>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Recursion</title>
+    <meta name="description" content="">
+    <meta name="author" content="Xuan Ji">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+            
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html#home" title="home">Home</a></li>
+                <li><a href="index.html#about" title="about">About</a></li>
+                <li><a href="index.html#blog" title="blog">Blog</a></li>
+                <li><a href="index.html#contact" title="contact">Contact</a></li>	
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <article class="blog-single">
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="page-header page-header--single page-hero" style="background-image:url(images/recursion/Russian-doll.jpg)">
+        
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <h1 class="page-header__title">
+                        <a href="#0" title="">
+                            Recursion is better than Loop! (Sometimes.)
+                        </a>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">Nov 1, 2020</li>
+                        <li class="author">
+                            By
+                            <span>Xuan Ji</span>
+                        </li>
+                    </ul>
+                    
+                </article>
+            </div>
+    
+        </div> <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+                
+
+
+<!--                 <p>
+                <img src="images/wheel-1000.jpg" 
+                     srcset="images/wheel-2000.jpg 2000w, 
+                        images/wheel-1000.jpg 1000w, 
+                        images/wheel-500.jpg 500w" 
+                     sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                </p> -->
+
+
+                <div class="mceTemp"></div>
+
+                <div align="center">
+                <p>
+                <img src="images/recursion/Recursion.jpeg" style="margin: 0 auto" width="300" alt="">
+                </p>
+                <blockquote><p>Original comic from Safely Endangered. No idea who created this variant of the meme.
+                </p></blockquote>
+                </div>
+
+                <h2><strong>1) Tip/Trick Explanation:</strong> Coin toss - reusing and recursive problem solving</h2>
+                What's recursion? The best illustration I think is the Russian doll. Once you get a Russian doll, you see just one figurine. But you can remove the top half of the first doll, and then you get another, slightly smaller, Russian doll! You can keep removing that smaller dolls' top halves, and you will keep finding smaller dolls inside it.  If there are infinite ($latex N \rightarrow \infty$) smaller Russian dolls, the first one containing N Russian dolls can be treated in exactly the same way as the second one containing (N-1) Russian dolls, just with some scaling. That's how the recursive algorithm works! It is to solve a problem by solving a smaller instance of the same problem.
+
+
+                In our textbook, the author takes the example of a coin game where two players take turns tossing a coin; whoever firstly tosses heads wins. We can assume that the probability of the first player’s winning is $latex p$. Therefore, if the first player loses in his first turn and now it’s the second player’s turn, then what the second player faces currently is exactly the same as what the first player faces when he takes the first turn, so now the probability of winning for the second player should also be $latex p$. Note that only after the first player failed in his first turn, will this condition occur. So the total probability of the second player’s winning is p/2. In this example, the first player’s winning is the Russian Doll!
+
+                The textbook also tells a joke of John von Neumann to show his advanced mathematical skill using the recursive thinking. When I searched for recursive back-of-the-envelope problems, I realized that recursion is one of the central ideas of computer science. Recursive thinking of course can help us simplify the calculation. For programming, it can help avoid the loop, which could cut down the lines of code and improve computational efficiency. So I chose a coding problem to solve this week.
+                <h2><strong>2) Example Back of the envelope calculation:</strong></h2>
+                <h3><strong>a) Question:</strong><a href="https://www.geeksforgeeks.org/print-a-pattern-without-using-any-loop/">Print a pattern without any loop. </a></h3>
+                Given a number n, print following a pattern without using any loop. For example, n is asked to be first reduced by 5, and then one by one until it reach a negative or 0. After it reaches 0 or negative, it should be added 5 until it reaches n.
+                <pre>Examples:
+
+                Input: n = 16
+                Output: 16, 11, 6, 1, -4, 1, 6, 11, 16
+
+                Input: n = 10
+                Output: 10, 5, 0, 5, 10</pre>
+                
+
+                <h3><strong>b) Solution Strategy: </strong></h3>
+
+
+                
+
+
+                The first thing coming up in my mind is to write a simple but redundant loop, but I was told to apply recursive thinking to this question. Let's see if it will be more beautiful than the loop.
+
+                Firstly, we need to find the Russian doll, which should be "5 less/more than the former figure". Let's take it as our major function and keep doing it.
+
+                A potential mudding part is that the condition changes after the number reaching a negative or 0. We could label it using an index.
+
+                The flowchart is attached at the right, a<span style="font-size: 16px;">nd below is my code in Python:</span>
+                <div align="center">
+                <p>
+                <img src="images/recursion/flow-chart-excursion-492x1024.png" style="margin: 0 auto" alt="">
+                </p>
+                <blockquote><p>The Flowchart.
+                </p></blockquote>
+                </div>
+                <pre>def recur(n0,t,index):
+                    # where n0 is the initial (the first) number; 
+                    # n is the one we should calculate on; 
+                    # t is the step length;
+                    # index = True if n&gt;0; index = False if n&lt;=0.
+                    print(n)
+                    if index and n &lt;=n0:
+                        n = n - t
+                        if n &lt;= 0:
+                            index = False
+                        return recur(n0,n,t,index)
+                    elif n&lt;n0:
+                        n = n + t
+                        return recur(n0,n,t,index)
+                    elif n == n0:
+                        return
+
+                </pre>
+                <h3><strong>c) Quantitative Estimates:</strong></h3>
+                For this part, I just test my code using different numbers:
+                <pre>Input: recur(16,16,5,True)
+                Output:16 11 6 1 -4 1 6 11 16
+
+                Input: recur(25,25,7,True)
+                Output:25 18 11 4 -3 4 11 18 25</pre>
+                <pre>Input:recur(-2,-2,3,False) 
+                Output: -2 
+
+                Input:recur(2,2,6,True) 
+                Output: 2 -4 2</pre>
+                The code did a great job!
+                <h3><strong>d) Conclusions &amp; Reflection:</strong></h3>
+                Compared to loop, recursion is more simple and beautiful. I think loop is like to construct a building carefully, while recursion is like a cheater who grabs a small but key subproblem and deals with it once and for all. The trick is to find the Russian Doll in the problem!
+
+                &nbsp;
+                <div class="page" title="Page 15">
+                <div class="layoutArea">
+                <div class="column">
+                <h3>ACKNOWLEDGEMENT:</h3>
+                This post has made use of the practice examples on <a href="https://practice.geeksforgeeks.org/">GeeksForGeeks</a>, a wonderful website for practicing coding!
+
+                &nbsp;
+
+                </div>
+                </div>
+                </div>
+
+                <hr />
+
+                <h2>3) Back-up Problem:</h2>
+                In case my coding problem can not be counted as the back-of-the-envelope calculation (It seems no calculation is included in my problem...), I also picked the John von Neumann's problem(Problem 2.7 on Page 34).
+                <h3><strong>a) Question:</strong></h3>
+                <div class="page" title="Page 52">
+                <div class="layoutArea">
+                <div class="column">
+
+                If the fly starts when the trains are 60 miles apart, each train travels at 20 miles per hour, and the fly travels at 30 miles per hour, how far does the fly travel, in total, before meeting its maker when the trains collide? (Apologies that physics problems are often so violent.)
+                <div class="page" title="Page 52">
+                <div class="section">
+                <div class="layoutArea">
+                <div class="column">
+
+                Find the insightful and the infinite-series solution to the problem of the fly and the approaching trains (Section 2.2). Check that they give the same answer for the distance that the fly travels!
+
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <h3><strong>b) Solution Strategy &amp; </strong><strong>Quantitative Estimates:</strong></h3>
+                <div class="page" title="Page 52">
+                <div class="layoutArea">
+                <div class="column">
+                <h4>b.1 Insightful solutions:</h4>
+                The fly keeps flying until the trains collide, so we can calculate the time and multiply it by fly's speed.
+
+                $latex x_{fly} = v_{fly}\times t = 30 \times \frac{30}{20} = 45 miles$
+                <h4></h4>
+                <h4>b.2 Infinite-series</h4>
+                </div>
+                </div>
+                </div>
+                
+                <div align="center">
+                <p>
+                <img src="images/recursion/IMG_0519-1024x968.jpg" style="margin: 0 auto" width="500" alt="">
+                </p>
+                </div>
+
+                The recursive thinking is used to calculated the infinite-series as indicated by the green highlight.
+
+
+                <h3><strong>c) Conclusions &amp; Reflection:</strong></h3>
+                
+
+                <div align="center">
+                <p>
+                <img src="images/recursion/dogie.gif" style="margin: 0 auto" width="500" alt="">
+                </p>
+                <blockquote><p>Thank-you-for-reading-it bonus! Recursive Doge. Click for gif! Credit: @ PuppyDontCare https://imgur.com/gallery/lYEK8Cd[/caption]</p></blockquote>
+                </div>
+
+                This case tells us although recursive could help us simplify the calculation but sometimes there might be a more clever way. So never be restricted by one method!
+                <div class="page" title="Page 15">
+                <div class="layoutArea">
+                <div class="column">
+
+                &nbsp;
+
+                </div>
+                </div>
+                </div>
+
+
+
+                <p class="blog-content__tags">
+                    <span>Post Tags</span>
+
+                    <span class="blog-content__tag-list">
+                        <a href="#0"> OOM </a>
+                        
+                    </span>
+
+                </p>
+
+                <!-- <div class="blog-content__pagenav">
+                    <div class="blog-content__nav">
+                        <div class="blog-content__prev">
+                            <a href="#0" rel="prev">
+                                <span>Previous Post</span>
+                                Tips on Minimalist Design 
+                            </a>
+                        </div>
+                        <div class="blog-content__next">
+                            <a href="#0" rel="next">
+                                <span>Next Post</span>
+                                Less Is More 
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-content__all">
+                        <a href="blog.html" class="btn btn--primary">
+                            View All Post
+                        </a>
+                    </div>
+                </div> -->
+
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://www.facebook.com/xuan.ji.1297"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Xuan40972369"><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/typhooneye"><i class="im im-github" aria-hidden="true"></i><span>Github</span></a>
+                    </li>
+                    <li>
+                        <a href="skype:893394821@qq.com?chat"><i class="im im-skype" aria-hidden="true"></i><span>Skype</span></a>
+                    </li>
+                    </a></li>
+                </ul>
+                
+
+                <div class="footer-logo">
+                    <a class="footer-site-logo" href="#0"><img src="images/logo.png" alt="Homepage"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Hola 2017</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span> 
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+    
+    
+        <div id="preloader"> 
+            <div id="loader"></div>
+        </div>
+    
+    
+        <!-- Java Script
+        ================================================== -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>
