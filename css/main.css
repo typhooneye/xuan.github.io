@@ -1273,6 +1273,15 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-top: 0;
 }
 
+.section-intro h2 {
+    color: #862121;
+    font-family: "librebaskerville-bold", serif;
+    font-size: 3.0rem;
+    line-height: 1.375;
+    margin-top: 0;
+}
+
+
 .section-intro h3 {
     font-family: "montserrat-semibold", sans-serif;
     font-size: 2rem;
@@ -1631,7 +1640,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-nav-wrap {
     font-family: "montserrat-bold", sans-serif;
-    font-size: 11px;
+    font-size: 25px;
     text-transform: uppercase;
     letter-spacing: .25rem;
     position: absolute;
@@ -1772,10 +1781,31 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: relative;
 }
 
-.home-content h3 {
+.home-content h2 {
     font-family: "montserrat-bold", sans-serif;
     font-size: 1.8rem;
     color: #862121;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    position: relative;
+}
+
+.home-content h3::before {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin-top: -1.5px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.home-content h3 {
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 1.8rem;
+    color: #FFFFFF;
     text-transform: uppercase;
     letter-spacing: .5rem;
     position: relative;
@@ -1784,17 +1814,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-bottom: .6rem;
 }
 
-.home-content h3::before {
-    display: block;
-    content: "";
-    width: 60px;
-    height: 2px;
-    background-color: #862121;
-    margin-top: -1.5px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-}
 
 .home-content h1 {
     font-family: "librebaskerville-bold", serif;
@@ -1804,7 +1823,23 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-top: 0;
 }
 
+.home-content h4 {
+    font-family: "librebaskerville-bold", serif;
+    color: #FFFFFF;
+    font-size: 3rem;
+    line-height: 1.35;
+    margin-top: 0;
+}
+
+.home-content h5 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    line-height: 1.35;
+    margin-top: 0;
+}
+
 .home-content__main {
+    color: #FFFFFF;
     padding-right: 300px;
     position: relative;
 }
@@ -1919,7 +1954,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-social i {
-    font-size: 1.8rem;
+    font-size: 3.0rem;
     right: 0;
     -webkit-transform: scale(0.7);
     -ms-transform: scale(0.7);
@@ -1928,7 +1963,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-social span {
     color: #af2b2b;
-    right: 3.6rem;
+    right: 4.6rem;
     font-size: 1.3rem;
     opacity: 0;
     visibility: hidden;
@@ -3376,6 +3411,65 @@ footer a:hover, footer a:focus {
 
 .footer-social li:last-child::after {
     display: none;
+}
+
+.footer-social_black {
+    list-style: none;
+    margin-top: 3rem;
+    margin-left: 0;
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.footer-social_black:after {
+    content: "";
+    display: table;
+    clear: both;
+    color: #00000;
+}
+
+.footer-social_black li {
+    display: inline-block;
+    padding-left: 0;
+    margin-right: .9rem;
+    line-height: 3.9rem;
+    vertical-align: middle;
+    color: #00000;
+}
+
+.footer-social_black li::after {
+    content: "|";
+    color: rgba(255, 255, 255, 0.15);
+    padding-left: .9rem;
+    color: #00000;
+}
+
+.footer-social_black li i {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    vertical-align: middle;
+    color: #00000;
+}
+
+.footer-social_black li span {
+    margin-left: .6rem;
+    color: #00000;
+}
+
+.footer-social_black li a {
+    color: #00000;
+}
+
+.footer-social_black li:last-child {
+    margin-right: 0;
+    color: #00000;
+}
+
+.footer-social_black li:last-child::after {
+    display: none;
+    color: #00000;
 }
 
 .footer-bottom {
